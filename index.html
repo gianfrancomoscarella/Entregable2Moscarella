@@ -5,20 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Argentina</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer ></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>Spotify Argentina</h1>
-    <div class="botones">
-        <button id="btnAgregar">Agregar Canción</button>
-        <button id="btnMostrar">Mostrar Lista de Canciones</button>
-        <button id="btnBuscar">Buscar Canción por Título</button>
-        <button id="btnLargas">Mostrar Canciones Largas (>5 min)</button>
-        <button id="btnSalir">Salir</button>
+    <h1>🎶 Spotify Argentina</h1>
+
+    <div class="formulario">
+        <input type="text" id="titulo" placeholder="Título de la canción">
+        <input type="text" id="artista" placeholder="Artista">
+        <input type="text" id="duracion" placeholder="Duración (mm:ss)">
     </div>
 
-    <pre id="salida"></pre>
-</body>
+    <div class="botones">
+        <button id="btnAgregar">Agregar Canción</button>
+        <button id="btnMostrar">Mostrar Lista</button>
+        <button id="btnBuscar">Buscar Canción</button>
+        <button id="btnLargas">Canciones Largas (>5 min)</button>
+        <button id="btnSalir">Salir</button>
+        <button id="btnDarkMode">🌙 Modo Oscuro</button>
+    </div>
 
+    <div id="mensajes"></div>
+    <pre id="salida"></pre>
+
+    <div id="modalSalir" class="modal">
+        <div class="modal-contenido">
+            <h2>⚠️ Confirmar salida</h2>
+            <p>¿Estás seguro de que quieres salir?</p>
+            <div class="modal-botones">
+                <button id="confirmarSalir">Sí, salir</button>
+                <button id="cancelarSalir">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
